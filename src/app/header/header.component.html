@@ -19,7 +19,7 @@
     <div class="col-12">        
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Bootcamp Angular</a>
+              <a class="navbar-brand" href="#">{{title}}</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" 
                                                                                                                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -33,10 +33,16 @@
                     <a class="nav-link" href="#uno">Sección 1</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#dos">Sección 2</a>
+                    <a class="nav-link" [routerLink]="['/seccion2']">Sección 2</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#tres">Sección 3</a>
+                    <a class="nav-link" [routerLink]="['/seccion3']">Sección 3</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/seccion2', 'Mónica']">Menú 4(n)</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/seccion3', 'Murcia', 'Nonduermas']">Menú 5(cyp)</a>
                   </li>
                 </ul>
               </div>

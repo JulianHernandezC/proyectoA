@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
 
-  constructor() { }
+  personaData:any = {nombre:"María", apellidos:"De la O", edad: 25};
+
+  constructor( ) { 
+  }
 
   ngOnInit(): void {
+  }
+
+  eventoBotonAngular():void {
+    console.log('Evento: '+this.personaData.nombre+' '+this.personaData.apellidos);
   }
 
 }
