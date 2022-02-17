@@ -19,18 +19,35 @@ export class UsuarioComponent implements OnInit {
 
   listarUsuarios():void {
     this.usService.listarUsuarios().subscribe({
-          next: (r) => this.usuarios = r,
+          next: (r) => {
+            this.usuarios = r;
+            console.log (this.usuarios);
+          },
           error: (e) => console.log( JSON.stringify(e))
     });
   }
 
 
-  eliminarUsuario (id:string):void {
-    console.log('Eliminar usuario: '+id);
+  eliminarUsuario (id_usuario:number) { 
+    console.log("Eliminar usuario:" +id_usuario)
+    this.usService.eliminarUsuario(id_usuario).subscribe ( {
+                                            next: () => {
+                                              for (let i=0; i<this.usuarios.length; i++)
+                                                if ( this.usuarios[i].id == i+1)
+                                                  this.usuarios.splice(i, i);
+                                            },
+                                            //this.listarUsuarios(), 
+                                            error: (e) => console.log(JSON.stringify(e))
+                                        });
   }
 
-  nuevoUsuario() {
-    console.log('Nuevo usuario: '+this.usuarioAagregar.name);
+  nuevoUsuario () {
+    console.log("NuevoUsuario.");
+
+    this.usService.nuevoUsuario (this.usuarioAagregar).subscribe ( {
+                                          next: () => this.usuarios.push(this.usuarioAagregar)  ,//this.listarUsuarios(), 
+                                          error: (e) => console.log(JSON.stringify(e))
+                                        });
   }
 
 }
