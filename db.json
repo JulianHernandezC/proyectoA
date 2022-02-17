@@ -1,0 +1,68 @@
+{
+  "libros": [
+    {
+      "id": 1,
+      "title": "El hobbit",
+      "author": "Tolkien"
+    },
+    {
+      "id": 2,
+      "title": "Ready player one",
+      "author": "Ernest Cline"
+    },
+    {
+      "id": 3,
+      "title": "El laberinto de lo imposible",
+      "author": "Julián H.C."
+    },
+    {
+      "id": 4,
+      "title": "Ready player one",
+      "author": "Ernest Cline"
+    },
+    {
+      "id": 5,
+      "title": "El laberinto de lo imposible",
+      "author": "Julián H.C."
+    },
+    {
+      "id": 6,
+      "title": "Ready player one",
+      "author": "Ernest Cline"
+    },
+    {
+      "id": 7,
+      "title": "El laberinto de lo imposible",
+      "author": "Julián H.C."
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment 111s",
+      "postId": 2
+    },
+    {
+      "id": 2,
+      "body": "some comment 222",
+      "postId": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 2,
+      "name": "Lucas Muñoz",
+      "username": "lmunoz",
+      "email": "lmunoz@nttdata"
+    },
+    {
+      "id": 3,
+      "name": "Ana Martínez",
+      "username": "amart",
+      "email": "amart@nttdata"
+    }
+  ]
+}

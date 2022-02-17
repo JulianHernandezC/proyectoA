@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-principal',
@@ -9,7 +10,9 @@ export class PrincipalComponent implements OnInit {
 
   personaData:any = {nombre:"María", apellidos:"De la O", edad: 25};
 
-  constructor( ) { 
+  constructor( translate: TranslateService) { 
+    translate.setDefaultLang('es');
+    translate.use('es');
   }
 
   ngOnInit(): void {

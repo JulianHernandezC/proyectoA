@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class UsuariosService {
 
  
   listarUsuarios():Observable<any> {
-    return this.httpClient.get("https://jsonplaceholder.typicode.com/users");
+    return this.httpClient.get( environment.apiRest + "/users");
   }
 
   eliminarUsuario(id_usuario:number):Observable<any> {
