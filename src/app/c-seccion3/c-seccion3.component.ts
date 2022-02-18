@@ -18,6 +18,16 @@ export class CSeccion3Component implements OnInit {
     this.productos = productosService.listadoProductos();
    }
 
+   concatenaIdProductos (listProducts:Product[]):string {
+    let cadena:string="";
+
+    listProducts.forEach ( (pr:Product) => {
+      cadena += pr.Id + ", ";
+    });
+    return cadena;
+  }
+
+
   ngOnInit(): void {
     this.route.params.subscribe ( (params) => {
       if (params['ciudad'] != null) {

@@ -10,9 +10,8 @@ export class UsuariosService {
 
   constructor(private httpClient: HttpClient) { }
 
- 
   listarUsuarios():Observable<any> {
-    return this.httpClient.get( environment.apiRest + "/users");
+    return this.httpClient.get( "https://jsonplaceholder.typicode.com/users/"); //environment.apiRest + "/users");
   }
 
   eliminarUsuario(id_usuario:number):Observable<any> {

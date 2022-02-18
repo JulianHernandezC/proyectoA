@@ -17,6 +17,11 @@ export class UsuarioComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  listarUsuariosSimple() {
+    this.usuarios = this.usService.listadoDeUsuarios();
+  }
+
+
   listarUsuarios():void {
     this.usService.listarUsuarios().subscribe({
           next: (r) => {
@@ -49,5 +54,16 @@ export class UsuarioComponent implements OnInit {
                                           error: (e) => console.log(JSON.stringify(e))
                                         });
   }
+
+
+
+  limpiarUsuarios() {
+    if (this.usuarios!=null && this.usuarios.length>0)
+      this._clearUsers();
+  }
+
+    private _clearUsers() {
+      this.usuarios=[];
+    }
 
 }
