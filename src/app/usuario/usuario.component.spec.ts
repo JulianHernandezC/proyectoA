@@ -42,7 +42,7 @@ describe ('UsuarioComponent Component', ()=> {
         fixture.detectChanges(); //Forzar a que pase por el ngOnInit
     });
 
-     it('should create', () => {
+    it('should create', () => {
         expect(component).toBeTruthy();
     });
 

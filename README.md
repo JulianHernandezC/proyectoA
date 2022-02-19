@@ -1,6 +1,20 @@
-# ProyectoA
+## ProyectoA >> Proyecto creado en paralelo durante el desarrollo de la bootcamp Angular (NTT Data)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
+
+## Descargar proyecto:
+
+Ejecuta `git clone https://github.com/JulianHernandezC/proyectoA.git` en el directorio donde quieras descargártelo.
+
+## Obtener librerías:
+
+Una vez descargado el código, entra en la carpeta 'proyectoA' (donde está el fichero package.json) y desde ahí ejecuta el comando `npm install` para descargar todos los módulos asociados (carpeta 'node_modules').
+
+## Cargar proyecto en Visual Studio Code:
+
+Pulsa sobre el nombre del directorio en línea de comandos (con Control+click de ratón) y se te ofrecerá la opción de cargarte una instancia de Visual Studio en dicho proyecto. Sino, otra opción es abrirlo directamente desde el IDE: 'File - Open Folder' (y seleccionamos el directorio base 'proyectoA').
+
+Recuerda que tienes un tag creado asociado a cada uno de los puntos de control del proyecto para que puedas irte a cómo se quedó el proyecto tras acabar algunas partes del temario.
 
 ## Development server
 
